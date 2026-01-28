@@ -1,6 +1,6 @@
 # Sales Data Cleaner
 
-**Goal**: A Python ETL pipeline that processes messy CSV sales data, cleans it by removing special characters, deduplicates records, converts USD prices to INR, and outputs a clean JSON report.
+**Goal**: Write a script to process a messy CSV file and generate a clean JSON report.
 
 ---
 
@@ -14,13 +14,9 @@
 
 ```bash
 # 1. Install required dependencies
-pip install pandas
+pip install -r requirements.txt
 
-# 2. Create the input directory and file
-mkdir -p raw_data
-# Create sales.csv in raw_data/ with the messy data
-
-# 3. Run the script
+# 2. Run the script
 python main.py
 ```
 
@@ -144,25 +140,18 @@ If I had **2 more days**, I would add:
 
 ```
 sales-data-cleaner/
+├── notebooks
+|   └── test.ipynb   # test code and EDA
 ├── raw_data/
-│   └── sales.csv          # Input messy CSV
+│   ├── sales.csv    # Input messy CSV
+|   └── sales.py     # Create messy data
 ├── screenshots/
-│   ├── clean_sales_json.png
-│   └── console_output.png
+│   ├── clean_sales_json.jpeg
+│   └── console_output.jpeg
 ├── main.py                # Main ETL script
 ├── clean_sales.json       # Output clean data
 ├── requirements.txt       # Dependencies
 └── README.md             # This file
 ```
 
----
 
-## License
-
-MIT License - Feel free to use this for your data engineering portfolio!
-
----
-
-## Author
-
-Built as part of a data engineering challenge to demonstrate ETL pipeline skills and clean code practices.
